@@ -5,3 +5,5 @@ out/
 android/build/
 *.keystore
 next-env.d.ts
+
+.vercel
