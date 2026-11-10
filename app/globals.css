@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:#f6f7f9;color:#111;line-height:1.5}
+main{max-width:640px;margin:0 auto;padding:16px}
+h1{font-size:1.5rem;margin:8px 0 16px}
+h2{font-size:1.15rem;margin:0 0 12px}
+section{background:#fff;border-radius:12px;padding:16px;margin-bottom:16px}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 12px}
+dt{font-weight:600;color:#444}
+dd{margin:0;word-break:break-all}
+.ua{font-size:.8rem;color:#555}
+.tabs{display:flex;gap:4px;border-bottom:2px solid #ddd;margin-bottom:8px}
+.tabs [role=tab]{flex:1;padding:12px 8px;font-size:1rem;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;color:#555}
+.tabs [role=tab][aria-selected=true]{border-bottom-color:#2559d9;color:#2559d9;font-weight:700}
+.products{list-style:none;margin:0;padding:0}
+.product{display:flex;align-items:center;justify-content:space-between;padding:14px 4px;border-bottom:1px solid #eee}
+.product-text{display:flex;flex-direction:column}
+.product-name{font-size:1rem}
+.product-price{font-weight:700;color:#2559d9}
+.detail{width:48px;height:48px;border-radius:24px;border:1px solid #ccc;background:#fff;display:flex;align-items:center;justify-content:center;color:#333}
+.detail:focus-visible,[role=tab]:focus-visible{outline:3px solid #2559d9;outline-offset:2px}
+.status{min-height:1.5em;margin:12px 0 0;color:#333}
+.about p{margin:0 0 8px}

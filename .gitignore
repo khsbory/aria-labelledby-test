@@ -1,0 +1,7 @@
+node_modules/
+.next/
+out/
+.vercel/
+android/build/
+*.keystore
+next-env.d.ts
