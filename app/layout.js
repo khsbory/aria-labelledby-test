@@ -1,7 +1,6 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "aria-labelledby test",
   description: "Compare how TalkBack reads aria-label vs aria-labelledby button names in Android WebView.",
 };
 

@@ -160,9 +160,6 @@ export default function Tester() {
   useEffect(() => {
     if (!lang) return;
     document.documentElement.lang = lang;
-    const id = setTimeout(() => { document.title = T[lang].title; }, 0);
-    document.title = T[lang].title;
-    return () => clearTimeout(id);
   }, [lang]);
 
   const switchLang = (next) => {
@@ -194,11 +191,12 @@ export default function Tester() {
   const parsed = parseVersion(webviewVersion);
   const fixed = parsed ? compare(parsed, FIX_VERSION) >= 0 : null;
 
-  if (!lang) return <main />;
+  if (!lang) return <main><title>aria-labelledby test</title></main>;
   const t = T[lang];
 
   return (
     <main>
+      <title>{t.title}</title>
       <h1>{t.title}</h1>
 
       <nav aria-label={t.language} className="lang">
