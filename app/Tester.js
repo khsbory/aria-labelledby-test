@@ -160,7 +160,9 @@ export default function Tester() {
   useEffect(() => {
     if (!lang) return;
     document.documentElement.lang = lang;
+    const id = setTimeout(() => { document.title = T[lang].title; }, 0);
     document.title = T[lang].title;
+    return () => clearTimeout(id);
   }, [lang]);
 
   const switchLang = (next) => {
