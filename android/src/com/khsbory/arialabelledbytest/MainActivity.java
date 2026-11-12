@@ -28,7 +28,9 @@ public class MainActivity extends Activity {
         webView.setWebViewClient(new WebViewClient());
         webView.addJavascriptInterface(new InfoBridge(), "AndroidInfo");
         setContentView(webView);
-        webView.loadUrl(TEST_URL);
+        // Optional start path for testing, e.g. adb shell am start -n ... --es path /aria-pressed
+        String path = getIntent().getStringExtra("path");
+        webView.loadUrl(path != null && path.startsWith("/") ? TEST_URL + path : TEST_URL);
     }
 
     @Override
